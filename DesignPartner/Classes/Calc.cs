@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPartner
+namespace DesignPartner.Classes
 {
     public class Calc
     {

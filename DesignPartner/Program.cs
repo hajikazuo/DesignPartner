@@ -1,6 +1,8 @@
 ﻿using DesignPartner.Abstracao;
+using DesignPartner.Classes;
 using DesignPartner.Encapsulamento;
 using DesignPartner.Heranca;
+using DesignPartner.Interface;
 using DesignPartner.Polimorfismo;
 
 namespace DesignPartner
@@ -60,12 +62,26 @@ namespace DesignPartner
             // --------------------------------------------------------------------
 
             Notebook acer = new Notebook("Acer Aspire 5");
+            Console.WriteLine($"Nome do notebook: {acer.getNome()}");
             acer.porta1 = new Iphone();
+            acer.porta1.Plugar();
             acer.porta2 = new Teclado();
+            acer.porta2.Plugar();
             acer.porta3 = new Tablet();
+            acer.porta3.Plugar();
 
             Console.WriteLine("\n");
             // --------------------------------------------------------------------
+
+            Arquivo doc = new Documento() { Descricao = "Artigo .net" };
+            MP3 musica = new MP3() { Descricao = "Welcome to the jungle" };
+            Foto foto = new Foto() { Descricao = "Foto de formatura" };
+            doc.Abrir();
+            musica.Abrir();
+            foto.Abrir();
+            foto.Editar();
+            foto.Imprimir();
+
 
             Console.ReadLine();
         }  
