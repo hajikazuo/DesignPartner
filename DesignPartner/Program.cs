@@ -1,4 +1,6 @@
-﻿using DesignPartner.Heranca;
+﻿using DesignPartner.Abstracao;
+using DesignPartner.Encapsulamento;
+using DesignPartner.Heranca;
 using DesignPartner.Polimorfismo;
 
 namespace DesignPartner
@@ -18,6 +20,7 @@ namespace DesignPartner
             int r2 = c.Somar(x2, y2);
             Console.WriteLine("A soma de {0} com {1} é {2}", x2, y2, r2);
 
+            Console.WriteLine("\n");
             // --------------------------------------------------------------------
 
             Aluno gp = new Aluno();
@@ -31,6 +34,7 @@ namespace DesignPartner
             rp.Trabalhar();
             rp.Dormir();
 
+            Console.WriteLine("\n");
             // --------------------------------------------------------------------
 
             MeioTransporte cr = new Carro();
@@ -41,6 +45,26 @@ namespace DesignPartner
             av.Modelo = "Boeing 747";
             av.Mover();
 
+            Console.WriteLine("\n");
+            // --------------------------------------------------------------------
+
+            Carro2 Astra = new Carro2("GM Astra GSI");
+            Console.WriteLine($"Nome do carro: {Astra.Nome}");
+            Astra.NumPneus();
+            Astra.Ligar();
+            Astra.Mover();
+            Astra.Abastecer();
+            Astra.Mover();
+
+            Console.WriteLine("\n");
+            // --------------------------------------------------------------------
+
+            Notebook acer = new Notebook("Acer Aspire 5");
+            acer.porta1 = new Iphone();
+            acer.porta2 = new Teclado();
+            acer.porta3 = new Tablet();
+
+            Console.WriteLine("\n");
             // --------------------------------------------------------------------
 
             Console.ReadLine();
