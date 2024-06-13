@@ -1,5 +1,6 @@
 ﻿using DesignPartner.Abstracao;
 using DesignPartner.Classes;
+using DesignPartner.Delegacao;
 using DesignPartner.Encapsulamento;
 using DesignPartner.Heranca;
 using DesignPartner.Interface;
@@ -82,6 +83,11 @@ namespace DesignPartner
             foto.Editar();
             foto.Imprimir();
 
+            Console.WriteLine("\n");
+            // --------------------------------------------------------------------
+
+            Gerente chefe = new Gerente();
+            chefe.Trabalhar("Desenvolver um sistema");
 
             Console.ReadLine();
         }  
